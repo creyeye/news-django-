@@ -11,7 +11,7 @@ def post_list(request):
 def index(request):
     posts = Post.objects.all()
     return render(request, 'app/index.html', {"posts": posts})
-
+#lllll
 
 def post_detail(request, pk):
 
