@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PostDetail</title>
+</head>
+<body>
+{% if not post %}
+    <center>
+        <h2>Неверный индекс</h2>
+    </center>
+{% endif %}
+{% if not post %}
+    <center>
+        <h1>404</h1>
+        <h3>Page Not Found</h3>
+    </center>
+{% endif %}
+<h1>{{ post.title }}</h1>
+   <img src="{{ post.image.url }}" alt="Post Image">
+<video width="320" height="240" controls>
+  <source src="{{ post.file.url }}" type="video/mp4">
+</video>
+    <p>{{ post.description }}</p>
+    <p>{{ post.created_date }}</p>
+
+</body>
+<style>
+    body {
+    background-color: gray;
+    }
+</style>
+</html>

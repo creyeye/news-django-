@@ -1,0 +1,15 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PostList</title>
+</head>
+<body>
+{% for post in posts %}
+    <center>
+        <h4><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h4>
+        <p>{{ post.created_date }}</p>
+        <hr>
+    </center>
+{% endfor %}
+</body>
+</html>
