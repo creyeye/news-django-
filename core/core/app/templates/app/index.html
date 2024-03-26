@@ -1,4 +1,6 @@
+git
 {% load static %}
+
 <html class="no-js" lang="en">
 
     <head>
@@ -93,10 +95,10 @@
 								+1 222 777 6565
 							</li>
 							<li class="header-top-contact">
-								<a href="#">sign in</a>
+								<a href="{% url 'login' %}">login</a>
 							</li>
 							<li class="header-top-contact">
-								<a href="#">register</a>
+								<a href="{% url 'sign_up' %}">register</a>
 							</li>
 						</ul>
 					</div>
